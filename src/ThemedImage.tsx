@@ -6,7 +6,11 @@ type ThemedImageProps = Omit<ImageProps, "src"> & {
   dark: ImageProps["src"];
 };
 
-const ThemedImage: React.FC<ThemedImageProps> = ({ light, dark, ...props }) => {
+export default function ThemedImage({
+  light,
+  dark,
+  ...props
+}: ThemedImageProps) {
   const [src, setSrc] = React.useState<ImageProps["src"]>(light);
 
   React.useEffect(() => {
@@ -20,7 +24,5 @@ const ThemedImage: React.FC<ThemedImageProps> = ({ light, dark, ...props }) => {
       e.matches ? setSrc(dark) : setSrc(light);
   }, []);
 
-  return <Image src={src} {...props} />;
-};
-
-export default ThemedImage;
+  return <Image {...props} src={src} />;
+}
