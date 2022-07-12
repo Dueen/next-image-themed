@@ -1,0 +1,22 @@
+{
+  "name": "next-image-themed",
+  "version": "1.0.0",
+  "description": "A Next.js Image Component that allows you to shows a different image in light and dark-mode, based on the users preference.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "next",
+    "image",
+    "themed",
+    "light-mode",
+    "dark-mode",
+    "react"
+  ],
+  "author": " ",
+  "license": "ISC",
+  "peerDependencies": {
+    "next": "^12.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
