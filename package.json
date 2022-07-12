@@ -2,8 +2,26 @@
   "name": "next-image-themed",
   "version": "1.0.0",
   "description": "A Next.js Image Component that allows you to shows a different image in light and dark-mode, based on the users preference.",
-  "main": "index.js",
-  "scripts": {},
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dueen/next-image-themed"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "keywords": [
     "next",
     "image",
@@ -12,11 +30,23 @@
     "dark-mode",
     "react"
   ],
-  "author": " ",
-  "license": "ISC",
-  "peerDependencies": {
+  "scripts": {
+    "build": "npx rimraf dist && npm run build:cjs",
+    "build:cjs": "tsc --module commonjs --outDir dist"
+  },
+  "dependencies": {
     "next": "^12.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.7.4"
+  },
+  "peerDependencies": {
+    "next": "10 || 11 || 12",
+    "react": "^16.8 || 17 || 18",
+    "react-dom": "^16.8 || 17 || 18"
   }
 }
